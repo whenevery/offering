@@ -5,7 +5,7 @@ var fs = require('fs');
 module.exports = {
     start:function(app){
         try{
-            var env = process.env.NODE_ENV;
+            var env = process.env.NODE_ENV || process.env.env;
             var configData = require(__ROOT__ + '/config/config');
             try{
                 if(env){

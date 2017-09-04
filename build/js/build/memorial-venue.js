@@ -517,10 +517,12 @@ $.photoHandler = function(width , height){
             });
             $content.append($img);
             if(move && productData){
+
                 //effects A 香 B 烛 C 纸 D 烟花 E 火炮
-                var isSpec;
+                var isSpec,offset;
                 var effects = productData.effects;
                 var audio = audioObject[effects] && audioObject[effects].audio;
+                console.log('effects ' + effects);
                 if(effects === 'A'){
                     isSpec = true;
                     $img.attr('src',imgSrc[3]);
@@ -545,8 +547,46 @@ $.photoHandler = function(width , height){
                     $img.attr('src',imgSrc[2]);
                 }
                 else if(effects === 'C'){
+                    //纸也是特殊处理
                     isSpec = true;
                     $img.attr('src',imgSrc[4]);
+                    WY.trigger('note-show',{
+                        content:$backMain
+                    });
+                    return false;
+                }
+                if(effects === 'G'){
+                    //从左到右
+                    $img.attr('src',useCommon.concatImgUrl(productData.sacrificeBigImg));
+                    offset = offsetMethod.getMoveOffset(productData.locTag , move);
+                    $img.css({
+                        left:0,
+                        bottom:offset.bottom,
+                        zIndex:11
+                    }).animate({left:700},3000,function(){
+                        $(this).remove();
+                        method.putShow();
+                    });
+                    return false;
+                }
+                if(effects === 'H'){
+                    //从右到左
+                    $img.attr('src',useCommon.concatImgUrl(productData.sacrificeBigImg));
+                    offset = offsetMethod.getMoveOffset(productData.locTag , move);
+                    $img.css({
+                        left:$backMain.width(),
+                        bottom:offset.bottom,
+                        zIndex:11
+                    }).animate({left:800},3000,function(){
+                        $(this).remove();
+                        method.putShow();
+                    });
+                    return false;
+                }
+                if(effects === 'I'){
+                    //将图片放大显示的处理
+                    isSpec = 1;
+                    $img.attr('src',useCommon.concatImgUrl(productData.sacrificeBigImg));
                 }
                 if(isSpec){
                     $img[0].onload = function(){
@@ -566,21 +606,7 @@ $.photoHandler = function(width , height){
                     };
                     return false
                 }
-                if(productData.sacrificeId === 1005){
-                    $img.attr('src',useCommon.concatImgUrl(productData.sacrificeBigImg));
-                    var offset = offsetMethod.getMoveOffset(productData.locTag , move);
-                    $img.css({
-                        left:0,
-                        bottom:offset.bottom,
-                        zIndex:11
-                    }).animate({left:700},3000,function(){
-                        $(this).remove();
-                        method.putShow();
-                    });
-                    return false;
-                }
             }
-
             return {
                 img:$img
             };
@@ -675,7 +701,6 @@ $.photoHandler = function(width , height){
                         left:a,
                         bottom:offsets.bottom
                     });
-
                 });
             }
             else {

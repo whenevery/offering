@@ -2,7 +2,7 @@
 module.exports = {
     "port":3085,
     apiImgUrl:'http://img.yunji128.com/',
-    apiUrl:'http://120.77.156.29:8060',
+    apiUrl:'http://api.yunji128.com',
     appid:'00001node',
     appsecrect:'VfsJnh63IefgCs9ltdBEETLcW3o3jsTt',
     "log4js":{

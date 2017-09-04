@@ -7,8 +7,10 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	app = express();
 global.__ROOT__ = __dirname;
-global.publicDir = process.env.NODE_ENV?'public':'build';
-global.viewDir = process.env.NODE_ENV?'views':'build/views';
+global.isWindows = (process.env.NODE_ENV || process.env.env);
+console.log(process.env.NODE_ENV || process.env.env);
+global.publicDir = isWindows?'public':'build';
+global.viewDir = isWindows?'views':'build/views';
 app.use(function(req , res , next){
 	var method = req.method;
 	//非get post不进入后面逻辑
