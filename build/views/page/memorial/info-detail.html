@@ -1,0 +1,37 @@
+<fieldset class="one-detail-info">
+    <legend>逝者信息</legend>
+    <div class="form-horizontal ">
+        <div class="form-group" >
+            <label class="control-label col-sm-3">逝者姓名：</label>
+            <div class="col-sm-3">
+                <input name="personName" class="form-control" >
+            </div>
+            <div class="height-bt-34 ">(最多6个字，只限中文)</div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-3">逝者性别：</label>
+            <div class="col-sm-7 height-bt-34">
+                <label class="mr-25"><input type="radio" checked name="personSex" value="0">男</label>
+                <label><input type="radio" name="personSex" value="1">女</label>
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-3">出生日期：</label>
+            <div class="col-sm-3">
+                <input type="text" name="bornIn" class="form-control" maxlength="11" placeholder="xxxx年xx月xx日">
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-3">逝世日期：</label>
+            <div class="col-sm-3">
+                <input type="text" name="diedIn" class="form-control" maxlength="11" placeholder="或公元前xxx年">
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-3">生平简介：</label>
+            <div class="col-sm-6">
+                <textarea type="text" name="introduction" class="form-control" maxlength="300"></textarea>
+            </div>
+        </div>
+    </div>
+</fieldset>

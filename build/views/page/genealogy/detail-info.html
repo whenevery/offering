@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">族谱详情</h4>
+</div>
+<div class="modal-body">
+    <div class="form-horizontal data-form text-left">
+        <div class="form-group">
+            <label class="control-label col-sm-2">族谱名称</label>
+            <div class="col-sm-8">
+                <div readonly class="form-control"><%=modalInfo.genealogyName%></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">辈轮</label>
+            <div class="col-sm-8">
+                <textarea readonly class="form-control"><%=modalInfo.description%></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">姓氏</label>
+            <div class="col-sm-8">
+                <div readonly class="form-control"><%=modalInfo.surname%></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">所属地区</label>
+            <div class="col-sm-8 city-line">
+                <div readonly class="form-control" ><%=modalInfo.province%> <%=modalInfo.city%> <%=modalInfo.county%></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">族谱来源</label>
+            <div class="col-sm-8 city-line">
+                <div readonly class="form-control"><%=modalInfo.source%></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">族谱描述</label>
+            <div class="col-sm-8 city-line position-relative">
+                <textarea readonly class="form-control" name="description"><%=modalInfo.description%></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer" modal-handler="genealogy-handler">
+    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+</div>

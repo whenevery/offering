@@ -1,0 +1,36 @@
+<% title="亲友资料"%>
+<% home="user"%>
+<% include ../../layouts/header.html%>
+<link rel="stylesheet" href="/css/swiper.min.css">
+<div class="page-body position-relative pb-80 back-238">
+    <% include ../common/header.html%>
+    <div class="page-main margin-auto pt-20 pb-80">
+        <fieldset class="pb-20">
+            <legend>基本信息</legend>
+            <div><img src="<%=useCommon.getHeadImg(friendInfo.headImg )%>" class="ico-big border-red-100" alt=""/></div>
+            <div><span class="inline-block text-right width-100">用户ID：</span><%=friendInfo.userId  %></div>
+            <div><span class="inline-block text-right width-100">昵称：</span><%=friendInfo.nickname  %></div>
+            <div><span class="inline-block text-right width-100">性别：</span><%=friendInfo.gender   %></div>
+            <div><span class="inline-block text-right width-100">生日：</span><%=friendInfo.birthDay    %></div>
+            <div><span class="inline-block text-right width-100">家乡：</span><%=friendInfo.jxProvince + friendInfo.jxCity  + friendInfo.jxCounty %></div>
+            <div><span class="inline-block text-right width-100">现居地：</span><%=friendInfo.xjProvince  + friendInfo.xjCity   + friendInfo.xjCounty  %></div>
+            <div><span class="inline-block text-right width-100">个人简介：</span><%=friendInfo.introduction  %></div>
+        </fieldset>
+        <fieldset>
+            <legend>个人资源</legend>
+            <ul class="nav nav-tabs wy-toggle-active">
+                <li role="presentation" class="active cursor-pointer"><a>纪念馆</a></li>
+                <li role="presentation" class="cursor-pointer"><a>族谱</a></li>
+            </ul>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide pt-10 pb-10 flex-auto flex-wrap-auto"></div>
+                    <div class="swiper-slide pt-10 pb-10"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <% include ../common/footer.html%>
+</div>
+<script src="/js/build/user-detail.js"></script>
+<% include ../../layouts/footer.html%>

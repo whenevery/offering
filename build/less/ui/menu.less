@@ -1,0 +1,28 @@
+.home-menu{
+  & > *{
+    display: inline-block;
+    padding: 0 10px;
+    height: @height-header;
+    color: white;
+    .cursor-pointer;
+    &:hover{
+      color: @color-hover;
+    }
+    &.active{
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+.step-menu{
+   height: 60px;
+   line-height: 60px;
+  .flex('',center);
+  div{
+    background: @color-gray-1;
+    width: 33%;
+  }
+  .active{
+    background: @color-yellow-1;
+  }
+}

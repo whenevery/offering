@@ -1,0 +1,22 @@
+<% title="族谱"%>
+<% home="memorial"%>
+<% include ../../layouts/header.html%>
+<div class="page-body position-relative pb-80">
+    <% include ../common/header.html%>
+    <div class="page-main margin-auto pb-20">
+        <div class="back-gray-3 clearfix">
+            <div class="color-red pull-left height-40 lh-40 pl-10">《<%=resJson.detail.genealogyName%>》</div>
+            <div class=" div-btn add-new-btn pull-right height-40 lh-40">添加祖辈</div>
+        </div>
+        <div class="height-600 overflow-hidden show-canvas-content back-white">
+            <div class="position-relative move">
+                <canvas height="600px" class="show-genealogy-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <% include ../common/footer.html%>
+</div>
+
+<script src="/js/build/genealogy-input.js"></script>
+<% include ../../layouts/footer.html%>

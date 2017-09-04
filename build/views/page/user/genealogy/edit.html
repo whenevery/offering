@@ -1,0 +1,52 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title"><%=modalInfo.title||'新增族谱'%></h4>
+</div>
+<div class="modal-body">
+    <div class="form-horizontal data-form">
+        <input type="hidden" name="genealogyId" value="<%=modalInfo.genealogyId%>"/>
+        <div class="form-group">
+            <label class="control-label col-sm-2">族谱名称</label>
+            <div class="col-sm-8">
+                <input type="text" maxlength="4" name="genealogyName" value="<%=modalInfo.genealogyName%>" class="form-control" placeholder="4个字 XX族谱"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">辈轮</label>
+            <div class="col-sm-8">
+                <textarea type="text" maxlength="100" name="church" class="form-control"><%=modalInfo.church%></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">姓氏</label>
+            <div class="col-sm-8">
+                <input type="text" maxlength="2" name="surname" value="<%=modalInfo.surname%>" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">所属地区</label>
+            <div class="col-sm-8 city-line" modal-handler="city-select">
+                <select name="province" auto-select="<%=modalInfo.province%>" class="form-control province-select"></select>
+                <select name="city" auto-select="<%=modalInfo.city%>" class="form-control city-select"></select>
+                <select name="county" auto-select="<%=modalInfo.county%>" class="form-control district-select"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">族谱来源</label>
+            <div class="col-sm-8 city-line">
+                <input type="text" class="form-control" value="<%=modalInfo.source%>" name="source"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">族谱描述</label>
+            <div class="col-sm-8 city-line position-relative">
+                <div class="position-absolute bottom-0 right-0 mb-10 mr-25 color-999">剩余<span class="show-more-number">300</span>字</div>
+                <textarea show-text-number=".show-more-number" maxlength="300" class="form-control" name="description"><%=modalInfo.description%></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer" modal-handler="genealogy-handler">
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+    <button type="button" class="btn btn-primary submit-btn">确定</button>
+</div>

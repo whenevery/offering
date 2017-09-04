@@ -1,0 +1,40 @@
+.window-input{
+  padding: 20px;
+  height: 60px;
+  line-height: 20px;
+  color: #333;
+  width: 100%;
+  border: 1px solid #eee;
+  &.sm-input{
+    width: 60%;
+  }
+}
+textarea{
+  resize: none;
+  &.form-control{
+    height: 150px;
+  }
+}
+.radio{
+  height: 15px;
+  line-height: 15px;
+  input{
+    display: none;
+  }
+  .ico{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(/images/ico/radio.png) no-repeat;
+  }
+  &.checked{
+    .ico{
+      background: url(/images/ico/radio-checked.png);
+    }
+  }
+}
+.form-group{
+  .control-label.text-left{
+    text-align: left;
+  }
+}

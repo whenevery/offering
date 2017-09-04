@@ -1,0 +1,79 @@
+.show-step-content{
+  background: white;
+  padding: 35px 40px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  &.null-padding{
+    padding: 0;
+  }
+  .head-img{
+    width: 150px;
+    height: 185px;
+    background: #eee;
+  }
+  &.end-img{
+    width: 100%;
+    height: 465px;
+    background: url(/images/memorial/add-end-logo.png) 100% 100%;
+  }
+  .text-content{
+    padding-left:120px;
+    padding-top:180px;
+  }
+}
+.memorial-tpl-content{
+  .item{
+    width: 180px;
+    margin-right:25px;
+    img{
+      width: 100%;
+      height: 90px;
+      background: rgb(204,204,204);
+    }
+    .text{
+      line-height: 25px;
+    }
+  }
+  & :last-child{
+    margin-right:0;
+  }
+}
+
+.memorial-main{
+  .right{
+    .login-info{
+      height: 170px;
+      padding-top: 20px;
+      .head{
+        .img{
+          width: 80px;
+          height: 80px;
+          margin: 0 20px;
+          border-radius: 100%;
+          background: #eee;
+        }
+        & > div{
+          height: 80px;
+        }
+      }
+      .foot{
+        padding: 10px;
+        .flex('',center);
+        text-align: center;
+        & > div{
+          width: 33%;
+        }
+        & > span{
+          width: 1px;
+          height: 30px;
+          background: #eee;
+        }
+      }
+    }
+  }
+}
+.memorial-list{
+  min-height: 180px;
+  background:transparent;
+}

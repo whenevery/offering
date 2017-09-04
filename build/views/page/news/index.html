@@ -1,0 +1,22 @@
+<% title="云祭文化"%>
+<% home="news"%>
+<% include ../../layouts/header.html%>
+<div class="page-body position-relative pb-80 back-238">
+    <% include ../common/header.html%>
+    <div class="page-main  news-main page-float-main margin-auto pt-30 pb-20 clearfix">
+        <div class="left pull-left min-h-600 back-238 overflow-hidden">
+            <% include ./list.html%>
+            <% include ./detail.html%>
+        </div>
+        <div class="right pull-right">
+            <% include ./list-other.html%>
+            <a href="http://map.baidu.com/?l=&s=s%26wd%3D%E5%AF%BA%E5%BA%99" target="_blank">
+                <img src="/images/news/search.png" class="width-100-100 mt-20" alt=""/>
+            </a>
+            <% include ./list-three.html%>
+        </div>
+    </div>
+    <% include ../common/footer.html%>
+</div>
+<script src="/js/build/news-index.js"></script>
+<% include ../../layouts/footer.html%>

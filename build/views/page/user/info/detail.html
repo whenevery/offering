@@ -1,0 +1,60 @@
+<div class="back-white pt-20 pb-20 pl-20 pr-20">
+    <div class="color-blue-1 fz-25 lh-30 height-30 mb-10">基本资料</div>
+    <form class="form-horizontal width-800 pt-50">
+        <div class="form-group">
+            <label for="nickname" class="col-sm-2 control-label">昵称：</label>
+            <div class="col-sm-6">
+                <input type="text" name="nickname" class="form-control" id="nickname" placeholder="请输入昵称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="realName" class="col-sm-2 control-label">真实姓名：</label>
+            <div class="col-sm-6">
+                <input type="text" name="realName" class="form-control" id="realName" placeholder="请输入真实姓名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">性别：</label>
+            <div class="col-sm-6 pt-7">
+                <label class=""><input type="radio" name="gender" checked value="男">男</label>
+                <label class=""><input type="radio" name="gender" value="女">女</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">生日：</label>
+            <div class="col-sm-6 city-line" modal-handler="birth-day">
+                <select name="year" class="form-control year" ></select>
+                <select name="month" class="form-control month" ></select>
+                <select name="day" class="form-control day" ></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">家乡：</label>
+            <div class="col-sm-6 city-line" modal-handler="city-select">
+                <select name="jxProvince" class="form-control province-select" ></select>
+                <select name="jxCity" class="form-control city-select" ></select>
+                <select name="jxCounty" class="form-control district-select" ></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">现居地：</label>
+            <div class="col-sm-6 city-line" modal-handler="city-select">
+                <select name="xjProvince" class="form-control province-select"></select>
+                <select name="xjCity" class="form-control city-select"></select>
+                <select name="xjCounty" class="form-control district-select"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">个人简介：</label>
+            <div class="col-sm-6" >
+                <textarea name="introduction" maxlength="200" placeholder="请输入您的个人简介" class="form-control" ></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-6 text-left" >
+                <button class="btn back-blue-2 color-white submit-btn">保存</button>
+            </div>
+        </div>
+    </form>
+</div>

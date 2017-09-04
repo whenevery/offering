@@ -1,0 +1,34 @@
+.user-menu{
+  .list{
+    display: none;
+  }
+  .menu{
+    .ico-right{
+      margin-top: 15px;
+      margin-right: 20px;
+      background: url(/images/ico/right.png);
+    }
+    &.active{
+      .ico-right{
+        background: url(/images/ico/down.png);
+      }
+      .list{
+        display: block;
+      }
+    }
+  }
+  .ico{
+    left: 40px;
+    top:12px;
+  }
+  .item{
+    padding-left: 80px;
+    height: 51px;
+    line-height: 50px;
+    background: @color-blue-3;
+    border-bottom:1px solid @color-blue-1;
+    &.active{
+      background:@color-blue-4;
+    }
+  }
+}

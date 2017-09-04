@@ -1,0 +1,13 @@
+<div class="venue-window color-white position-relative">
+    <div class="del-ico cursor-pointer" data-dismiss="modal" aria-label="Close" >×</div>
+    <div class="fz-20 mb-40 text-left">生平<%=query.typeName%></div>
+    <div class="product-content display-table width-100-100">
+        <%if(query.userId){%>
+        <div class="text-center">
+            <a href="/user#venue-album" target="_blank">管理<%=query.typeName%></a>
+        </div>
+        <%}else{%>
+        <div class="text-center">暂无</div>
+        <%}%>
+    </div>
+</div>

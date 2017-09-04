@@ -1,0 +1,24 @@
+<% title="族谱"%>
+<% home="memorial"%>
+<% include ../../layouts/header.html%>
+<div class="page-body position-relative pb-80">
+    <% include ../common/header.html%>
+    <div class="page-main margin-auto pb-20">
+        <div class="back-gray-3 clearfix">
+            <div class="color-red pull-left height-40 lh-40 pl-10">
+                《<%=resJson.detail.genealogyName%>》
+                <span class="ml-20 color-333 cursor-pointer" modal-load="/genealogy/detail/page?genealogyId=<%=query.id%>">查看详情</span>
+            </div>
+        </div>
+        <div class="height-600 overflow-hidden show-canvas-content back-white">
+            <div class="position-relative move">
+                <canvas height="600px" class="show-genealogy-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <% include ../common/footer.html%>
+</div>
+
+<script src="/js/build/genealogy-detail.js"></script>
+<% include ../../layouts/footer.html%>

@@ -1,0 +1,20 @@
+<div class="auto-window" modal-handler="login-reg">
+    <div data-dismiss="modal" aria-label="Close" class="pull-right del-ico color-white cursor-pointer text-top">×</div>
+    <div class="fz-25 mb-40">欢迎注册云祭奠平台账号</div>
+    <input type="hidden" name="sendType" value="REGISTER">
+    <div class="margin-auto width-300">
+        <input type="text" name="userName" maxlength="11" class="window-input mb-20" placeholder="请输入手机号">
+        <div class="mb-20 clearfix">
+            <input type="text" name="imgCode" maxlength="5" class="window-input sm-input show-img-code pull-left">
+            <img class="pull-right img-code-btn height-60 width-100" show-code-input=".show-img-code" src="/captcha">
+        </div>
+        <div class="mb-20 clearfix">
+            <input type="text" name="sendCode" class="window-input sm-input pull-left">
+            <div class="div-btn pull-right text-right sms-send-btn active height-60 lh-60 fz-12">点击发送验证码</div>
+        </div>
+        <input type="password" name="password" maxlength="18" class="window-input mb-10" placeholder="密码">
+        <button class="btn back-blue-1 color-hover width-100-100 height-60 fz-18 mb-60 submit-btn">注册</button>
+        <div class="color-blue-1 text-underline fz-16 cursor-pointer" modal-load="window/login/login">已有账号，马上登录！</div>
+    </div>
+    <script src="/js/ui/sms.js"></script>
+</div>

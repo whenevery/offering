@@ -1,0 +1,45 @@
+<% title="搜索"%>
+<% include ../../layouts/header.html%>
+<div class="page-body pb-80 position-relative back-238">
+    <% include ../common/header.html%>
+    <div class="search-main <%=query.key?'sm':''%>">
+        <div class="search-head text-center">
+            <div class="margin-auto">
+                <img src="/images/logo-blue.png" class="height-60" alt=""/>
+                <span class="inline-block pl-10 border-l-666 color-666 fz-25 height-25 text-middle" style="line-height: 25px;">搜索</span>
+            </div>
+        </div>
+        <div class="search-content margin-auto pt-10">
+            <div class="page-main margin-auto clearfix">
+                <div class="search-type-list mb-10 wy-toggle-active ">
+                    <div class="item cursor-pointer inline-block mr-20 active" type="news">云祭文化</div>
+                    <div class="item cursor-pointer inline-block mr-20" type="memorial">纪念馆</div>
+                    <div class="item cursor-pointer inline-block" type="genealogy">家谱族谱</div>
+                </div>
+                <div class="input-line clearfix ">
+                    <input type="text" value="<%=query.key%>" class="height-50 pl-15 search-input"/>
+                    <a class="btn back-blue-1 height-50 pt-10 text-center width-130 pull-right to-search-btn"><img src="/images/search.png" class="height-30" alt=""/></a>
+                </div>
+            </div>
+        </div>
+        <div class=" page-main margin-auto page-float-main pt-20 clearfix">
+            <div class="left pull-left">
+                <div class="show-result-content show-data-table pt-10"></div>
+            </div>
+            <div class="right pull-right">
+                <div class="border-l-yellow pl-15 fz-20 height-20 lh-20 font-weight mb-10 clearfix">
+                    <span class="">文化习俗</span>
+                    <a href='/news#{"type":"FS","otherType":"NEWS"}' class="color-999 pull-right fz-14 cursor-pointer show-other-btn">更多></a>
+                </div>
+                <div class="height-10 border-b-204 back-238"></div>
+                <ul class="show-other-list-content pt-10">
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <% include ../common/footer.html%>
+</div>
+<script src="/js/build/search-index.js"></script>
+<% include ../../layouts/footer.html%>

@@ -1,0 +1,364 @@
+.venue-main{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  .back-main{
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    .photo{
+      position: absolute;
+      top: 350px;
+      width: 100%;
+      z-index: 4;
+      .content{
+        line-height: 18px;
+        .text{
+          padding: 5px 30px;
+          width: 80px;
+        }
+      }
+      img{
+        width: 80px;
+        height: 100px;
+        margin: auto;
+      }
+    }
+  }
+  .category-content{
+    position: absolute;
+    bottom: 5px;
+    z-index: 99;
+    .item{
+      display: inline-block;
+      margin-right: 20px;
+      color: white;
+      .text{
+        line-height: 25px;
+        background: rgba(0,0,0,.3);
+      }
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .label-content{
+    position: absolute;
+    left: 400px;
+    top:200px;
+    z-index: 99;
+    img{
+      margin-right: 20px;
+    }
+  }
+}
+.venue-header{
+  height: 35px;
+  line-height: 35px;
+  background: rgba(0,0,0,.7);
+  a{
+    color: white;
+    display: inline-block;
+    :hover{
+      color: white;
+    }
+  }
+}
+.venue-back{
+  width: 100%;
+  height: 100%;
+  &.back{
+    z-index: 1;
+  }
+  &.front{
+    z-index: 2;
+  }
+  &.middle{
+    z-index: 3;
+  }
+}
+
+.venue-massage-content{
+  position: absolute;
+  top:70px;
+  right: 0;
+  width: 300px;
+  z-index: 100;
+  .title-item{
+    height: 30px;
+    line-height: 20px;
+    padding: 5px 15px;
+    border-radius: 2px;
+    font-size: 16px;
+  }
+  .main{
+    border-radius: 2px;
+    padding: 20px 15px;
+    line-height: 20px;
+    height: 370px;
+    textarea{
+      padding: 5px 5px 20px 5px;
+      height: 100px;
+      background: none;
+      resize: none;
+    }
+    & > div{
+      overflow: hidden;
+    }
+    .left{
+      width: 120px;
+    }
+    .right{
+      width: 150px;
+    }
+  }
+  .back{
+    background: rgba(0,0,0,.4);
+    color: white;
+  }
+  .able{
+    background: rgba(219,207,183,.7);
+    color: #333;
+    cursor: pointer;
+  }
+  .title{
+    color: @color-blue-2;
+  }
+  .text-content{
+    padding: 5px 5px 15px 5px;
+  }
+}
+.venue-window{
+  border-radius: 4px;
+  border: 6px solid rgba(255,255,255,.6);
+  background: rgba(0,0,0,.5);
+  padding: 15px 25px 25px 25px;
+  .sm-text{
+    color:rgba(255,255,255,.5);
+  }
+  .del-ico{
+    position: absolute;
+    background: none;
+    top:0;
+    right: 0;
+    color: white;
+  }
+  .list{
+    .flex('',left);
+    .item{
+      margin-right: 33px;
+    }
+  }
+  .div-btn{
+    padding: 5px 15px;
+  }
+  .product-content{
+    height: 270px;
+    overflow: hidden;
+  }
+  .record-content{
+    height: 370px;
+    .item{
+      img{
+        width: 80px;
+        height: 80px;
+        border-radius: 2px;
+      }
+      .text{
+        line-height: 25px;
+      }
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  }
+  .textarea-content{
+    max-height: 210px;
+    overflow: hidden;
+  }
+  .active{
+    color:@color-yellow-1;
+  }
+  .line{
+    padding: 5px 0;
+  }
+  .photo-content{
+    width: 100%;
+    position: relative;
+    .main{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: rgba(0,0,0,0);
+      video{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .right{
+      right: 0;
+    }
+    .left{
+      left: 0;
+    }
+    .ico-content{
+      position: absolute;
+      cursor: pointer;
+      .ico{
+        margin: auto;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+  .photo-body{
+    padding: 20px 80px 30px 80px;
+    height: 300px;
+    .ico-content{
+      top: 20px;
+      width: 80px;
+      height: 200px;
+      padding-top: 100px;
+      .ico{
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+      }
+    }
+    .left{
+      .ico{
+        border-right: 50px solid rgb(112,112,112);
+      }
+      &.able:hover{
+        .ico{
+          border-right: 50px solid white;
+        }
+      }
+    }
+    .right{
+      .ico{
+        border-left: 50px solid rgb(112,112,112);
+      }
+      &.able:hover{
+        .ico{
+          border-left: 50px solid white;
+        }
+      }
+    }
+    .main{
+      img{
+        position: absolute;
+        z-index: 1;
+      }
+    }
+  }
+  .photo-footer{
+    padding: 10px 20px;
+    height: 70px;
+    background: rgba(0,0,0,.7);
+    .ico-content{
+      top: 10px;
+      width: 20px;
+      height: 50px;
+      padding-top: 20px;
+      .ico{
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+      }
+    }
+    .left{
+      .ico{
+        border-right: 10px solid rgb(112,112,112);
+      }
+      &.able:hover{
+        .ico{
+          border-right: 10px solid white;
+        }
+      }
+    }
+    .right{
+      .ico{
+        border-left: 10px solid rgb(112,112,112);
+      }
+      &.able:hover{
+        .ico{
+          border-left: 10px solid white;
+        }
+      }
+    }
+    .main{
+      .item{
+        height: 100%;
+        width: 100px;
+        margin-right: 15px;
+        display: inline-block;
+        div{
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,.4);
+          &:hover{
+            background: none;
+          }
+        }
+        &.active{
+          div{
+            background: none;
+          }
+        }
+      }
+      div :last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+.category-img-content{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: url(/images/product/back-ico.png) no-repeat;
+  background-size:100% 100%;
+  padding: 5px;
+  &.active{
+    background: url(/images/product/back-ico-check.png) no-repeat;
+    background-size:100% 100%;
+  }
+  img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+  }
+}
+.venue-in{
+  .back-main{
+    .photo{
+      top:170px;
+      .img-back{
+        width: 126px;
+        height: 160px;
+        background: url(/images/venue/head-img.png);
+        padding: 29px 28px 32px 30px;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .content{
+        margin-top: -20px;
+        .text-back{
+          width: 90px;
+          height: 190px;
+          padding-left: 47px;
+          padding-top: 60px;
+          padding-right: 59px;
+          background: url(/images/venue/tablet.png) 8px 10px;
+        }
+
+      }
+    }
+  }
+  .label-content{
+    left: 380px;
+    top:150px;
+  }
+}

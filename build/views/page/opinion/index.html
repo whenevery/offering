@@ -1,0 +1,64 @@
+<% title="投诉建议"%>
+<% include ../../layouts/header.html%>
+<div class="page-body pb-80 position-relative back-238">
+    <% include ../common/header.html%>
+    <div class="page-main margin-auto pt-50 pb-20">
+        <div class="fz-25 pb-10 border-b-blue color-blue-1 mb-20 inline-block">投诉建议</div>
+        <div class="back-white border-eee-2 pt-20 pl-40 pb-20">
+            <div class="width-800">
+                <div class="color-red fz-12">
+                    如果是浏览速度、系统bug、视觉显示等问题，请注明您使用的操作系统、浏览器以及版本号，
+                    以便我们尽快对应查找问题并解决。
+                </div>
+                <div class="form-horizontal opinion-submit-form mt-30">
+                    <div class="form-group">
+                        <label class="width-100 pull-left control-label  text-left pl-15 fz-16">问题类型:</label>
+                        <div class="col-sm-10 color-999">
+                            <label class="radio checked inline-block mr-20 cursor-pointer">
+                                <i class="ico text-bottom"></i>
+                                <input type="radio" name="feedbackType" checked value="yj"/>
+                                <span class="text-bottom">意见建议</span>
+                            </label>
+                            <label class="radio inline-block mr-20 cursor-pointer">
+                                <i class="ico text-bottom"></i>
+                                <input type="radio" name="feedbackType" value="bug"/>
+                                <span class="text-bottom">BUG提交</span>
+                            </label>
+                            <label class="radio inline-block mr-20 cursor-pointer">
+                                <i class="ico text-bottom"></i>
+                                <input type="radio" name="feedbackType" value="jh"/>
+                                <span class="text-bottom">交互问题</span>
+                            </label>
+                            <label class="radio inline-block mr-20 cursor-pointer">
+                                <i class="ico text-bottom"></i>
+                                <input type="radio" name="feedbackType" value="other"/>
+                                <span class="text-bottom">其他问题</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group mt-20">
+                        <label class="width-100 pull-left control-label  text-left pl-15 fz-16">具体信息:</label>
+                        <div class="col-sm-8">
+                            <textarea maxlength="200" class="form-control" name="feedbackContent" placeholder="您的意见，是我们前进的动力......" ></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group mt-20">
+                        <label class="width-100 pull-left control-label  text-left pl-15 fz-16">联系方式:</label>
+                        <div class="col-sm-8">
+                            <input maxlength="50" type="text" name="contactInformation" class="form-control width-350"/>
+                        </div>
+                    </div>
+                    <div class="form-group mt-20">
+                        <label class="width-100 pull-left control-label  text-left pl-15 fz-16"></label>
+                        <div class="col-sm-8">
+                            <button class="btn back-blue-2 color-white text-center width-100 submit-btn">提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include ../common/footer.html%>
+</div>
+<script src="/js/build/opinion-index.js"></script>
+<% include ../../layouts/footer.html%>

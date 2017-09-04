@@ -1,0 +1,16 @@
+<div modal-handler="cut-img">
+    <div class="width-600 height-460 overflow-hidden position-relative" modal-handler="mouse-move">
+        <div class="position-relative move auto-cut" style="width: <%=query.width%>px;height:<%=query.height%>px">
+            <div class="back-black-4 position-absolute width-100-100 height-100-100"></div>
+            <img src="<%=query.src%>" class="cut-img" alt=""/>
+        </div>
+        <div class="position-absolute z-index-1 top-0 left-0 width-200 height-200 overflow-hidden move cut">
+            <img src="<%=query.src%>" class="cut-img result-img" alt=""/>
+        </div>
+    </div>
+    <div class=" pt-20 pb-20">
+        <button class="btn btn-default" data-dismiss="modal" aria-label="Close">取消</button>
+        <button class="btn btn-default reset-btn">重新选择</button>
+        <button class="btn btn-primary submit-btn">确定</button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="page-head">
+    <div class="page-main color-white margin-auto clearfix">
+        <img src="/images/logo.png" class="logo" alt="logo">
+        <div class="home-menu inline-block pl-80 height-header mr-25">
+            <a class="<%=home=='home'?'active':''%>" href="/">首页</a>
+            <a class="<%=home=='news'?'active':''%>" href="/news">云祭文化</a>
+            <a class="<%=home=='memorial'?'active':''%>" href="/memorial">云纪念馆</a>
+            <a class="<%=home=='genealogy'?'active':''%>" href="/genealogy">家族族谱</a>
+            <a class="login-success-show <%=home=='user'?'active':''%>" href="/user" style="visibility: hidden;">个人中心</a>
+        </div>
+        <div class="inline-block search-content border-white clearfix">
+            <input type="text" placeholder="搜索" class="border-none none-outline height-20 lh-20 text-middle pull-left mr-10 background-transparent"/>
+            <img src="/images/search.png" class="width-20 height-20 pull-right head-search-btn" alt=""/>
+        </div>
+        <a href="/opinion" target="_blank" class="pt-7 inline-block pull-right">
+            <img src="/images/opinion.png" class="ml-10  width-30 height-30" alt=""/>
+        </a>
+        <div class="pull-right btn-content user-login-info height-header">
+            <div class="">
+                <div class="mr-25 color-hover cursor-pointer fz-16 text-bottom inline-block" modal-load="window/login/login">登录</div>
+                <div class="color-hover cursor-pointer fz-16 text-bottom inline-block" modal-load="window/login/reg">注册</div>
+            </div>
+            <div style="display: none;">
+                <img class="ico-big border-red-100 mr-10" alt=""/>
+                <span class="show-user-name fz-16 height-30 lh-30 text-middle inline-block write-ellipsis" style="max-width: 100px;"></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+.home-header{
+  height: 400px;
+  background: url(/images/home/banner.png) center;
+  .ico-btn{
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    background: url(/images/home/right.png);
+    &:hover{
+      background: url(/images/home/right-hover.png);
+    }
+  }
+  &.left{
+    background: url(/images/home/banner-1.jpg) center;
+    .ico-btn{
+      background: url(/images/home/left.png);
+      &:hover{
+        background: url(/images/home/left-hover.png);
+      }
+    }
+  }
+  .page-main{
+    padding: 70px 80px 30px 0;
+  }
+}
+.ranking-type-content{
+  .item{
+    background: transparent;
+    color: #666;
+  }
+  .active{
+    background: @color-yellow-1;
+    color:white;
+  }
+}
+.ranking-list-content{
+  .first{
+    color:@color-yellow-1;
+  }
+  .two{
+    color:@color-yellow-3;
+  }
+  .three{
+    color:yellow;
+  }
+}

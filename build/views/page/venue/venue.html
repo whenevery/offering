@@ -1,0 +1,38 @@
+<% title="纪念馆"%>
+<% include ../../layouts/header.html%>
+<div class="venue-main back-333">
+    <div class="venue-header position-auto position-absolute">
+        <div class="page-main  margin-auto clearfix">
+            <div class="pull-left color-white">
+                <a href="/" >首页</a>&gt;
+                <a href="/memorial" >云纪念馆</a>&gt;
+                <a><%=resJson.peopleNumber==1?'单':'双'%>人馆</a>&gt;
+                <a><%=resJson.memorialName%>纪念馆</a>
+            </div>
+            <div class="pull-right">
+                <a class="mr-25">纪念馆ID：<%=resJson.memorialId%> | 建馆人：<%=resJson.userId%></a>
+                <a class="color-white login-success-show" href="/user" style="display: none;">我的纪念馆</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="venue-massage-content">
+        <div>
+            <div type="list" class="title-item inline-block back">
+                祭拜记录
+            </div>
+            <div type="message" class="title-item inline-block able back">
+                留言板
+            </div>
+        </div>
+        <div class="main back scroll-null">
+        </div>
+    </div>
+    <div class="back-main">
+
+    </div>
+    <div class="category-content"></div>
+
+</div>
+<script src="/js/build/memorial-venue.js"></script>
+<% include ../../layouts/footer.html%>

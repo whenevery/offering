@@ -1,0 +1,16 @@
+<div class="venue-window color-white position-relative">
+    <div class="del-ico cursor-pointer" data-dismiss="modal" aria-label="Close" >×</div>
+    <div class="fz-20 mb-40 text-left">来访记录<span class="color-yellow-1">(<span class="show-count-span"><%=totalElements%></span>)</span></div>
+    <div class="record-content text-left">
+        <%
+        list.forEach(function(o , i){
+        %>
+        <div class="item <%=((i+1)%5?'mr-25':'')%>  text-top">
+            <img src="<%=useCommon.getHeadImg(o.headImg)%>" alt="">
+            <div class="text text-center write-ellipsis width-80"><%=o.userName || '游客'%></div>
+        </div>
+        <%
+        });
+        %>
+    </div>
+</div>
