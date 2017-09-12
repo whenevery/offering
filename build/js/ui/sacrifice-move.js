@@ -3,10 +3,8 @@
         var showData = {};
         var $backMain = $('.back-main');
         var imgSrc = ['/images/animate/1014.gif',
-            '/images/animate/d.gif',
             '/images/animate/1.gif',
             '/images/animate/2.gif',
-            '/images/animate/c.gif',
         ];
         var audioObject = {
             D:{
@@ -38,7 +36,6 @@
             });
             $content.append($img);
             if(move && productData){
-
                 //effects A 香 B 烛 C 纸 D 烟花 E 火炮
                 var isSpec,offset;
                 var effects = productData.effects;
@@ -46,7 +43,7 @@
                 console.log('effects ' + effects);
                 if(effects === 'A'){
                     isSpec = true;
-                    $img.attr('src',imgSrc[3]);
+                    $img.attr('src',imgSrc[2]);
                 }
                 else if(effects === 'E'){
                     isSpec = true;
@@ -60,17 +57,15 @@
                         className:'position-absolute left-0 right-0 z-index-10',
                         audio:audio
                     });
-                    //$img.attr('src',imgSrc[1]).addClass('width-100-100 height-100-100');
                     return false;
                 }
                 else if(effects === 'B'){
                     isSpec = true;
-                    $img.attr('src',imgSrc[2]);
+                    $img.attr('src',imgSrc[1]);
                 }
                 else if(effects === 'C'){
                     //纸也是特殊处理
                     isSpec = true;
-                    $img.attr('src',imgSrc[4]);
                     WY.trigger('note-show',{
                         content:$backMain
                     });
@@ -229,8 +224,13 @@
                 var $img = imgData.img;
                 if($img){
                     var moveOffset = offsetMethod.getMoveOffset(locTag , move);
-                    if(productData.sacrificeId === 1005){
-                        moveOffset.width = 150;
+                    var width = productData.width;
+                    if(width && width > 0){
+                        moveOffset.width = width;
+                    }
+                    var height = productData.height;
+                    if(height && height > 0){
+                        moveOffset.height = height;
                     }
                     moveImg($img , {
                         move:move,

@@ -482,10 +482,8 @@ $.photoHandler = function(width , height){
         var showData = {};
         var $backMain = $('.back-main');
         var imgSrc = ['/images/animate/1014.gif',
-            '/images/animate/d.gif',
             '/images/animate/1.gif',
             '/images/animate/2.gif',
-            '/images/animate/c.gif',
         ];
         var audioObject = {
             D:{
@@ -525,7 +523,7 @@ $.photoHandler = function(width , height){
                 console.log('effects ' + effects);
                 if(effects === 'A'){
                     isSpec = true;
-                    $img.attr('src',imgSrc[3]);
+                    $img.attr('src',imgSrc[2]);
                 }
                 else if(effects === 'E'){
                     isSpec = true;
@@ -539,17 +537,15 @@ $.photoHandler = function(width , height){
                         className:'position-absolute left-0 right-0 z-index-10',
                         audio:audio
                     });
-                    //$img.attr('src',imgSrc[1]).addClass('width-100-100 height-100-100');
                     return false;
                 }
                 else if(effects === 'B'){
                     isSpec = true;
-                    $img.attr('src',imgSrc[2]);
+                    $img.attr('src',imgSrc[1]);
                 }
                 else if(effects === 'C'){
                     //纸也是特殊处理
                     isSpec = true;
-                    $img.attr('src',imgSrc[4]);
                     WY.trigger('note-show',{
                         content:$backMain
                     });
@@ -708,8 +704,13 @@ $.photoHandler = function(width , height){
                 var $img = imgData.img;
                 if($img){
                     var moveOffset = offsetMethod.getMoveOffset(locTag , move);
-                    if(productData.sacrificeId === 1005){
-                        moveOffset.width = 150;
+                    var width = productData.width;
+                    if(width && width > 0){
+                        moveOffset.width = width;
+                    }
+                    var height = productData.height;
+                    if(height && height > 0){
+                        moveOffset.height = height;
                     }
                     moveImg($img , {
                         move:move,
@@ -1275,7 +1276,7 @@ WY.bind('note-show',function(options){
    function createOne(){
        var r = Math.random()*showWidth;
        var x = minX + Math.ceil(r);
-       var speed = 10 || Math.random() * 100;
+       var speed = 5 || Math.random() * 100;
        var $img = $('<img src="/images/animate/note.jpg" class="width-60 position-absolute z-index-10 transform-rotate-90">');
        $content.append($img.css({
            left:x

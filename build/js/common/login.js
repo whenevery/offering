@@ -41,6 +41,7 @@
     $(document).on('click' , '.need-login-handler' , function(){
         var href = $(this).attr('href');
         var target = $(this).attr('target');
+        if(sessionJson.userInfo)return;
         WY.trigger('login' ,{}, function(){
             location.href = href;
         });

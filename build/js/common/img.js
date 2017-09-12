@@ -5,7 +5,7 @@
         return useCommon.concatImgUrl(url);
     };
     WY.getNewsImg = function(src){
-        var demo = '';
+        var demo = '/images/404.png';
         var ignore = ['http://cdn.tsingming.com/img/wm.jpg'];
         if(ignore.indexOf(src) != -1)return demo;
         return useCommon.concatImgUrl(src);

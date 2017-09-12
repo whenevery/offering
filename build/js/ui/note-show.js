@@ -38,7 +38,7 @@ WY.bind('note-show',function(options){
    function createOne(){
        var r = Math.random()*showWidth;
        var x = minX + Math.ceil(r);
-       var speed = 10 || Math.random() * 100;
+       var speed = 5 || Math.random() * 100;
        var $img = $('<img src="/images/animate/note.jpg" class="width-60 position-absolute z-index-10 transform-rotate-90">');
        $content.append($img.css({
            left:x

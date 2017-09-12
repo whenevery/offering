@@ -314,12 +314,15 @@ WY.genealogy = function(options){
             }
             else data.chouseId = editId;
             options.edit(data , function(o){
+                if(!parentId){
+                    parentId = o.genealogyPersonId;
+                }
                 if(data.createType === 'up'){
                     location.reload();
                     return;
                 }
                 $.modalLoadingHide();
-                call && call(data.genealogyPersonId?data:o);
+                call && call(o);
             });
         });
     }
@@ -343,10 +346,10 @@ WY.genealogy = function(options){
     function add(){
         $.modalLoadingView('genealogy/edit' , function($content){
             windowHandler($content , function(data){
-                var parentObj = item.getByParentId(editId);
-                if(parentObj){
-                    parentObj.showChildren = true;
-                    parentObj.searchChild(function(list){
+                var _parentObj = item.getByParentId(editId);
+                if(_parentObj){
+                    _parentObj.showChildren = true;
+                    _parentObj.searchChild(function(list){
                         putNew(list);
                     });
                 }else{
